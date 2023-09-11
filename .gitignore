@@ -278,6 +278,4 @@ psd
 thumb
 sketch
 
-tailwind_components/
-
 # End of https://www.toptal.com/developers/gitignore/api/react,django,python
