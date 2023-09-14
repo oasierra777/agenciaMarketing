@@ -1,37 +1,32 @@
 import store from "./store";
 import { Provider } from "react-redux";
+import { BrowserRouter as Router, Route, Routes, Link, useLocation } from "react-router-dom";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
-import Error404 from "containers/errors/Error404";
-import Home from "containers/pages/Home";
-import Cases from "containers/pages/Cases";
-import Services from "containers/pages/Services";
-import About from "containers/pages/About";
-import Careers from "containers/pages/Careers";
-import Blog from "containers/pages/Blog";
-import Contact from "containers/pages/Contact";
+import AnimatedRouters from 'Routes'
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 
 function App() {
+
   return (
-    <Provider store={store}>
+    <HelmetProvider>
+      <Helmet>
+        <title>Sisof | Software Agency</title>
+        <meta name="description" content="Agencia de software"/>
+        <meta name="keywords" content="agencia de software" />
+        <meta name="robots" content="all" />
+        <link rel="canonical" href="https://www.sisoft.com/" />
+        <meta name="author" content="Sisoft" />
+        <meta name="publisher" content="Sisoft" />
 
-      <Router>
-        <Routes>
-          {/* Error Display */}
-          <Route path="*" element={<Error404/>} />
-
-          {/* Home Display */}
-          <Route path="/" element={<Home/>} />
-          <Route path="/casos" element={<Cases/>} />
-          <Route path="/servicios" element={<Services/>} />
-          <Route path="/nosotros" element={<About/>} />
-          <Route path="/carreras" element={<Careers/>} />
-          <Route path="/blog" element={<Blog/>} />
-          <Route path="/contacto" element={<Contact/>} />
-        </Routes>
-      </Router>
-    </Provider>
+      </Helmet>
+      <Provider store={store}>
+        <Router>
+          <AnimatedRouters/>
+        </Router>
+      </Provider>
+    </HelmetProvider>
   );
 }
 
