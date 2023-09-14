@@ -28,7 +28,7 @@ function CaseCard({data, index}){
                     </a>
                     </p>
                     <a href={data.href} className="mt-2 block">
-                    <p id={index} className="lg:text-4xl pt-4 pb-6 text-2xl font-semibold transition duration-400 ease-in-out text-gray-900">{data.title}</p>
+                    <p id={index} className="lg:text-4xl pt-4 pb-6 text-2xl font-semibold transition duration-400 ease-in-out">{data.title}</p>
                     <p className="mt-3 text-2xl space-y-2 leading-9 text-gray-500">{data.description}</p>
                     </a>
                 </div>
