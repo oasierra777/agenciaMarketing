@@ -1,3 +1,6 @@
+import { useEffect } from "react"
+
+
 import Header from "components/Home/Header"
 import Incentives from "components/Home/Incentives"
 import UseCases from "components/Home/UseCases"
@@ -8,7 +11,6 @@ import BlogList from "components/Home/BlogList"
 import Footer from "components/navigation/Footer"
 import Navbar from "components/navigation/Navbar"
 import Layout from "hocs/layouts/Layout"
-import { useEffect } from "react"
 
 function Home(){
 
